@@ -1,0 +1,29 @@
+
+.container{
+  background-color: #383837;
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  display: flex;
+  top:0;
+  align-items: center;
+  justify-content: end;
+  gap: 1em;
+}
+
+
+svg{
+  margin: 0 2.5% 0 0;
+  width: 60px;
+  height: 60px;
+  path{
+    fill: #e0c200;
+  }
+}
+
+span{
+  color: #f4d500;
+  margin: 0 0 0 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+

@@ -1,0 +1,237 @@
+.container{
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 #82828237;
+  position: relative;
+  display: flex;
+  float: right;
+  margin: 120px 40px 0 20px;
+  padding: 0;
+  width: 80%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.container2{
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  float: right;
+  margin: 20px 40px 0 20px;
+  padding: 0;
+  width: 60%;
+  height: 10vh;
+}
+
+.display{
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  display: inline-block;
+  justify-self: end;
+  width: 70%;
+  height: 10vh;
+  margin: 0 40px 0 20px;
+}
+
+.puesto{
+  background-color: #828282;
+  border: 1px solid #828282;
+  display: inline-block;
+  width: 40%;
+  height: 15vh;
+  margin: 1rem;
+  border-radius: 10px;
+
+}
+
+.puesto:hover{
+  background-color: #f5d400;
+  color: rgb(0, 0, 0);
+  border: 2px solid#f5d400;
+}
+
+.puestoD{
+  background-color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  height: 6vh;
+  border-radius: 10px 10px 0 0;
+}
+
+h1{
+  display: grid;
+  font-size: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  height: 7vh;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+p{
+  display: grid;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  align-items: center;
+  height: 9vh;
+  border-radius: 0 0 10px 10px;
+  justify-content: center;
+  margin: 0;
+}
+
+.comic-button {
+  display: inline-block;
+  float: right;
+  margin: 0.8rem;
+  padding: 0;
+  width: 16%;
+  height: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #f5d400;
+  border: 2px solid #f5d400;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #e0c200;
+  transition: all 0.3s ease;
+}
+
+.comic-button:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#f5d400;
+  box-shadow: 5px 5px 0px #f5d400;
+}
+
+.comic-button:hover{
+  background-color: #f5d400;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.comicButton {
+  display: inline-block;
+  float: right;
+  margin: 0.8rem;
+  padding: 0;
+  width: 18%;
+  height: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #383837;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #9494947e;
+  transition: all 0.3s ease;
+}
+
+.comicButton:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#292929;
+  box-shadow: 5px 5px 0px #292929;
+}
+
+.comicButton:hover{
+  background-color: #292929;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.comic1 {
+  display: inline-block;
+  float: right;
+  margin: 0.8rem;
+  padding: 0;
+  width: 18%;
+  height: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #f5d400;
+  border: 2px solid #f5d400;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #e0c200;
+  transition: all 0.3s ease;
+}
+
+.comic1:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#f5d400;
+  box-shadow: 5px 5px 0px #f5d400;
+}
+
+.comic1:hover{
+  background-color: #f5d400;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+.comic2 {
+  display: inline-block;
+  float: right;
+  margin: 0.8rem;
+  padding: 0;
+  width: 18%;
+  height: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #383837;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #9494947e;
+  transition: all 0.3s ease;
+}
+
+.comic2:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#292929;
+  box-shadow: 5px 5px 0px #292929;
+}
+
+.comic2:hover{
+  background-color: #292929;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.comic3 {
+  display: inline-block;
+  float: right;
+  margin: 0.8rem;
+  padding: 0;
+  width: 18%;
+  height: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #828282;
+  border: 2px solid #828282;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #9494947e;
+  transition: all 0.3s ease;
+}
+
+.comic3:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#828282;
+  box-shadow: 5px 5px 0px #828282;
+}
+
+.comic3:hover{
+  background-color: #828282;
+  box-shadow: none;
+  transform: translateY(4px);
+}

@@ -1,0 +1,153 @@
+
+
+
+.container{
+  background-color: #292929;;
+  color: #ffffff;
+  position: fixed;
+  height: 100%;
+  width: 16%;
+  transition: ease-in-out 1s;
+  overflow: hidden;
+}
+
+img{
+  height: 150px;
+  width: 200px;
+  display: flex;
+  justify-self: center;
+  margin: 30%;
+}
+
+button{
+  background-color: #292929;
+  position: relative;
+  display: flex;
+  float: right;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+svg {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 10px;
+  path{
+    fill: #ffffff;
+  }
+}
+
+.icono1{
+  width: 40px;
+  height: 40px;
+  path{
+    fill: none;
+  }
+}
+.icono{
+  width: 40px;
+  height: 40px;
+  path{
+    fill: #ffffff;
+  }
+}
+
+.svg3{
+  display: grid;
+  justify-self: center;
+  width: 40px;
+  height: 40px;
+    path{
+      fill: #ffffff;
+    }
+}
+
+.containerDentro{
+  color: #ffffff;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  height: 40vh;
+  width: 100%;
+}
+
+ul{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+ul li a{
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  gap: 1em;
+}
+
+.menuSelection{
+  background-color: #292929;
+  padding: 0 0 0 20px;
+  text-decoration: none;
+  border: 2px solid #292929;
+  border-radius: 10px;
+  width: 126%;
+  height: 8vh;
+  display: grid;
+}
+
+.menuSelection:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#525252;
+  box-shadow: 5px 5px 0px #525252;
+}
+
+.menuSelection:hover{
+  background-color: #525252;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.comic-button {
+  display: grid;
+  align-items: center;
+  justify-self: center;
+  float: none;
+  width: 70%;
+  height: 6vh;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #f5d400;
+  border: 2px solid #f5d400;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #e0c200;
+  transition: all 0.3s ease;
+  margin: 70px 0 70px 0;
+}
+
+.comic-button:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  border: 2px solid#f5d400;
+  box-shadow: 5px 5px 0px #f5d400;
+}
+
+.comic-button:hover{
+  background-color: #f5d400;
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.inactive{
+  transition: ease-in-out 1s;
+  display: none;
+}
