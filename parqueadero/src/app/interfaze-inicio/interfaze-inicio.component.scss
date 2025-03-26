@@ -1,1 +1,19 @@
+.container{
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  float: right;
+  margin: 120px 40px 0 20px;
+  padding: 0;
+  width: 80%;
+  height: 80vh;
+  overflow: hidden;
+}
 
+img{
+  display: grid;
+  align-self: center;
+  margin: 25%;
+  height: 500px;
+  width: 650px;
+}
