@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { SupabaseService } from '../service/supabase.service';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,9 @@ import { LoginComponent } from './login/login.component';
 })
 export class AppComponent {
   title = 'parqueadero';
+
+  constructor() {
+    // this.agregarDato();
+   }
+
 }
