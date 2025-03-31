@@ -1,16 +1,13 @@
-
 .container{
   background-color: #383837;
   width: 100%;
-  height: 10vh;
-  position: fixed;
+  height: 6em;
   display: flex;
   top:0;
   align-items: center;
   justify-content: end;
   gap: 1em;
 }
-
 
 svg{
   margin: 0 2.5% 0 0;
@@ -26,4 +23,3 @@ span{
   margin: 0 0 0 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
