@@ -3,12 +3,28 @@
   color: #ffffff;
   height: 100%;
   width: 15em;
-  transition: ease-in-out 1s;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: all ease-in-out 0.5s;
+}
+
+.menu-button{
+  display: flex;
+  flex-direction: row;
+  width:fit-content;
+  margin-right: auto;
+  background-color: transparent;
+
+  svg{
+    width: 60px;
+    height: 60px;
+    path{
+      fill: #ffffff;
+    }
+  }
 }
 
 img{
@@ -16,11 +32,10 @@ img{
   width: 200px;
   display: flex;
   justify-self: center;
-  margin-block: 3em;
+  margin-block: 1em;
 }
 
 button{
-  background-color: #292929;
   position: relative;
   display: flex;
   cursor: pointer;
@@ -133,6 +148,7 @@ ul li a{
 }
 
 .inactive{
-  transition: ease-in-out 1s;
-  display: none;
+  transition: all ease-in-out 0.5s;
+  width: 0;
+  //display: none;
 }
