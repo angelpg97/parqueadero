@@ -8,14 +8,11 @@
 }
 
 .parent {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 8px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
 
   .div1 {
-    grid-column: span 3 / span 3;
-    grid-row: span 3 / span 3;
   }
 
   .div2 {
@@ -23,8 +20,6 @@
     flex-direction: row;
     align-items: center;
     border: 2px solid #666666;
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
     grid-column-start: 4;
     border-radius: 10px;
 

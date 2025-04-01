@@ -1,34 +1,37 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
-import { ClockService } from '../../../service/clock.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-reloj',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [],
   templateUrl: './reloj.component.html',
   styleUrl: './reloj.component.scss'
 })
 export class RelojComponent implements OnInit, OnDestroy {
-  currentTime$ = this.clockService.getTime();
-  currentDate$ = this.clockService.getDate();
-  private dateSubscription?: Subscription;
-
   fecha: Date = new Date();
+  currentTime: string;
+  private timerInterval: any;
 
-  constructor(private clockService: ClockService) {
-    this.dateSubscription = this.currentDate$.subscribe(
-      date => this.fecha = date
-    );
+  constructor() {
+    this.currentTime = this.fecha.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
   }
 
   ngOnInit() {
-
+    this.actualizarHora();
+    this.timerInterval = setInterval(() => {
+      this.actualizarHora();
+    }, 60000); // 60000 ms = 1 minuto
   }
 
   ngOnDestroy() {
-    this.dateSubscription?.unsubscribe();
+    if (this.timerInterval) {
+      clearInterval(this.timerInterval);
+    }
+  }
+
+  actualizarHora() {
+    this.fecha = new Date();
+    this.currentTime = this.fecha.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
   }
 
   get day(): string {
