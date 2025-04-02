@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-reloj',
@@ -7,7 +7,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   templateUrl: './reloj.component.html',
   styleUrl: './reloj.component.scss'
 })
-export class RelojComponent implements OnInit, OnDestroy {
+export class RelojComponent implements OnInit {
   fecha: Date = new Date();
   currentTime: string;
   private timerInterval: any;
@@ -23,15 +23,9 @@ export class RelojComponent implements OnInit, OnDestroy {
     }, 60000); // 60000 ms = 1 minuto
   }
 
-  ngOnDestroy() {
-    if (this.timerInterval) {
-      clearInterval(this.timerInterval);
-    }
-  }
-
   actualizarHora() {
     this.fecha = new Date();
-    this.currentTime = this.fecha.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    this.currentTime = this.fecha.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit'});
   }
 
   get day(): string {

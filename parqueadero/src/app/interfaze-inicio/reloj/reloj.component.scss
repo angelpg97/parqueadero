@@ -1,29 +1,24 @@
-.container {
+.reloj-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 1.5em;
   background: #292929;
   border-radius: 12px;
   width: 100%;
+  height: 100%;
 
-  .hour {
+  .reloj-hour {
     font-size: 4em;
     font-weight: bold;
     color: #ffffff;
     margin-bottom: 1rem;
   }
 
-  .date {
+  .reloj-date {
     display: flex;
     font-size: 2em;
     color: #ffffff;
-
-    div {
-      padding: 0.5rem 1rem;
-      background: white;
-      border-radius: 8px;
-      font-weight: 500;
-    }
   }
 }
