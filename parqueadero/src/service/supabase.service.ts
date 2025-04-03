@@ -9,7 +9,10 @@ export class SupabaseService {
   private supabase: SupabaseClient;
 
   constructor() {
-    this.supabase = createClient(environment.supabaseUrl, environment.supabaseKey);
+    this.supabase = createClient(
+      environment.supabaseUrl,
+      environment.supabaseKey
+    );
   }
 
   // Ejemplo de función para insertar datos
@@ -19,13 +22,10 @@ export class SupabaseService {
     return data;
   }
 
-  async insertarEjemplo(name: string) {
-    const { data, error } = await this.supabase.from('ejemplo').insert([{ name }]);
-    if (error) {
-      console.error('Error al insertar:', error);
-      throw error;
-    }
-    return data;
+  async obtenerUsuario() {
+    let { data: users, error } = await this.supabase.from('users').select('*');
+    if (error) throw error;
+    return users;
   }
 }
 //
