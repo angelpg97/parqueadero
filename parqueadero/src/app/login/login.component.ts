@@ -1,3 +1,4 @@
+import { routes } from './../app.routes';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
@@ -7,6 +8,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { SupabaseService } from '../../service/supabase.service';
+import { Router } from '@angular/router';
+import { AuthService } from '../../service/Auth/auth.service';
 
 @Component({
   selector: 'login-componet',
@@ -17,27 +20,31 @@ import { SupabaseService } from '../../service/supabase.service';
 })
 export class LoginComponent {
   public loginForm: FormGroup;
+  public errorMessage: string;
+
   constructor(
     private formBuilder: FormBuilder,
-    private supabaseService: SupabaseService
+    private authService: AuthService,
+    private router: Router
   ) {
-    this.formBuilder = new FormBuilder();
+    this.errorMessage = '';
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
+      username: ['', [Validators.required, Validators.email]], // Añadido validador de email
+      password: ['', [Validators.required, Validators.minLength(6)]], // Añadido longitud mínima
     });
   }
 
   public async login() {
     if (this.loginForm.invalid) {
-      alert('Formulario inválido');
+      throw new Error('Por favor, complete todos los campos correctamente');
       return;
     }
-    try {
-      const users = await this.supabaseService.obtenerUsuario();
-      console.log(users);
-    } catch (error) {
-      console.error("Error al obtener usuarios:", error);
-    }
+
+    const authResponse = await this.authService.signUp({
+      email: this.loginForm.value.username ?? '',
+      password: this.loginForm.value.password ?? '',
+    });
+
+    console.log('Auth response:', authResponse);
   }
 }

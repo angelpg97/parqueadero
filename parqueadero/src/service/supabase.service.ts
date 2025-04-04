@@ -6,26 +6,12 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class SupabaseService {
-  private supabase: SupabaseClient;
+  supabaseClient: SupabaseClient;
 
   constructor() {
-    this.supabase = createClient(
+    this.supabaseClient = createClient(
       environment.supabaseUrl,
       environment.supabaseKey
     );
   }
-
-  // Ejemplo de función para insertar datos
-  async insertarDatos(tabla: string, datos: any) {
-    const { data, error } = await this.supabase.from(tabla).insert([datos]);
-    if (error) throw error;
-    return data;
-  }
-
-  async obtenerUsuario() {
-    let { data: users, error } = await this.supabase.from('users').select('*');
-    if (error) throw error;
-    return users;
-  }
 }
-//
