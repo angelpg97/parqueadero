@@ -1,14 +1,30 @@
-
-
-
 .container{
   background-color: #292929;;
   color: #ffffff;
-  position: fixed;
   height: 100%;
-  width: 16%;
-  transition: ease-in-out 1s;
+  width: 15em;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease-in-out 0.5s;
+}
+
+.menu-button{
+  display: flex;
+  flex-direction: row;
+  width:fit-content;
+  margin-right: auto;
+  background-color: transparent;
+
+  svg{
+    width: 60px;
+    height: 60px;
+    path{
+      fill: #ffffff;
+    }
+  }
 }
 
 img{
@@ -16,14 +32,12 @@ img{
   width: 200px;
   display: flex;
   justify-self: center;
-  margin: 10% 0 40% 0;
+  margin-block: 1em;
 }
 
 button{
-  background-color: #292929;
   position: relative;
   display: flex;
-  float: right;
   cursor: pointer;
   border-radius: 5px;
   border: none;
@@ -80,6 +94,7 @@ ul{
   padding: 0;
   flex-direction: column;
   list-style-type: none;
+  width: 100%;
 }
 
 ul li a{
@@ -95,59 +110,45 @@ ul li a{
   background-color: #292929;
   padding: 0 0 0 20px;
   text-decoration: none;
-  border: 2px solid #292929;
-  border-radius: 10px;
-  width: 126%;
+  width: 100%;
   height: 8vh;
-  display: grid;
-}
-
-.menuSelection:hover{
-  background-color: rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  border: 2px solid#525252;
-  box-shadow: 5px 5px 0px #525252;
+  display: flex;
 }
 
 .menuSelection:hover{
   background-color: #525252;
+  color: rgb(255, 255, 255);
   box-shadow: none;
-  transform: translateY(4px);
+  transform: translateY(1px);
+  transition: all 0.3s ease;
 }
 
 .comic-button {
   display: grid;
+  cursor: pointer;
   align-items: center;
   justify-self: center;
-  float: none;
-  width: 70%;
-  height: 6vh;
+  width: 80%;
+  height: 2.5em;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   color: white;
   background-color: #f5d400;
-  border: 2px solid #f5d400;
   border-radius: 10px;
-  box-shadow: 5px 5px 0px #e0c200;
   transition: all 0.3s ease;
-  margin: 70px 0 70px 0;
+  margin-block: 2.5em;
 }
 
 .comic-button:hover{
-  background-color: rgb(255, 255, 255);
+  filter: brightness(0.9);
   color: rgb(255, 255, 255);
-  border: 2px solid#f5d400;
-  box-shadow: 5px 5px 0px #f5d400;
-}
-
-.comic-button:hover{
-  background-color: #f5d400;
-  box-shadow: none;
-  transform: translateY(4px);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
 }
 
 .inactive{
-  transition: ease-in-out 1s;
-  display: none;
+  transition: all ease-in-out 0.5s;
+  width: 0;
+  //display: none;
 }
